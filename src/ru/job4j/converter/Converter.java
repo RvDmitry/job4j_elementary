@@ -3,7 +3,7 @@ package ru.job4j.converter;
 /**
  * Class Converter.
  * Класс служит для конвертации рублей в евро и доллары.
- * @autor Dmitry Razumov
+ * @author Dmitry Razumov
  * @version 1
  */
 public class Converter {
@@ -23,7 +23,7 @@ public class Converter {
      * @return Доллары
      */
     public static int rubleToDollar(int value) {
-        int rsl = value / 60; // формула перевода рублей в доллоры.
+        int rsl = value / 60;
         return rsl;
     }
 
@@ -37,13 +37,11 @@ public class Converter {
         int dollar = Converter.rubleToDollar(180);
         System.out.println("140 rubles are " + euro + " euro.");
         System.out.println("180 rubles are " + dollar + " dollar.");
-
         int in = 140;
         int expected = 2;
         int out = rubleToEuro(in);
         boolean passed = expected == out;
         System.out.println("140 rubles are 2 euro. Test result: " + passed);
-
         in = 180;
         expected = 3;
         out = rubleToDollar(in);
