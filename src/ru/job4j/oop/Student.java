@@ -22,6 +22,14 @@ public class Student {
     }
 
     /**
+     * Метод принимает и выводит на консоль строку
+     * @param lyrics Строка которую нужно вывести на консоль
+     */
+    public void music(String lyrics) {
+        System.out.println("I can sign a song : " + lyrics);
+    }
+
+    /**
      * Главный метод программы. Создает объект класса Student и вызывает его методы.
      * @param args Параметры командной строки
      */
@@ -33,5 +41,7 @@ public class Student {
         petya.song();
         petya.song();
         petya.song();
+        String song = "I believe, I can fly";
+        petya.music(song);
     }
 }
