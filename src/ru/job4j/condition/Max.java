@@ -15,8 +15,7 @@ public class Max {
      * @return Максимальное число из двух
      */
     public static int max(int first, int second) {
-        int result = first > second ? first : second;
-        return result;
+        return first > second ? first : second;
     }
 
     /**
@@ -27,9 +26,7 @@ public class Max {
      * @return Максимальное число из трех
      */
     public static int max(int first, int second, int third) {
-        int maximum = max(first, second);
-        int result = maximum > third ? maximum : third;
-        return result;
+        return max(max(first, second), third);
     }
 
     /**
@@ -41,9 +38,7 @@ public class Max {
      * @return Максимальное число из четырех
      */
     public static int max(int first, int second, int third, int four) {
-        int maximum = max(first, second, third);
-        int result = maximum > four ? maximum : four;
-        return result;
+        return max(max(first, second, third), four);
     }
 
 }
