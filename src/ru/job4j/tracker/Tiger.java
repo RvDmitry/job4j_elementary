@@ -4,15 +4,22 @@ package ru.job4j.tracker;
  * Class Tiger
  * Класс демонстрирует наследование классов.
  * @author Dmitry Razumov
- * @version 1
+ * @version 1.5
  */
 public class Tiger extends Predator {
     /**
      * Конструктор выводит сообщение на консоль.
      */
     public Tiger() {
-        super();
         System.out.println("Class Tiger");
+    }
+
+    /**
+     * Конструктор передает конструктору класса предка переменную.
+     * @param name Переменная name
+     */
+    public Tiger(String name) {
+        super(name);
     }
 
     /**
@@ -21,6 +28,6 @@ public class Tiger extends Predator {
      * @param args Параметры командной строки
      */
     public static void main(String[] args) {
-        Tiger tiger = new Tiger();
+        Tiger tiger = new Tiger("Name");
     }
 }
