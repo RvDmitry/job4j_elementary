@@ -4,27 +4,43 @@ package ru.job4j.condition;
  * Class Point
  * Класс рассчитывает расстояние между двумя точками.
  * @author Dmitry Razumov
- * @version 2
+ * @version 2.5
  */
 public class Point {
     /**
-     * Координата X.
+     * Координата x.
      */
     private int x;
 
     /**
-     * Координата Y.
+     * Координата y.
      */
     private int y;
+    /**
+     * Координата z
+     */
+    private int z;
 
     /**
-     * Конструктор - инициализирует начальные координаты точки.
-     * @param first Координата X
-     * @param second Координата Y
+     * Конструктор - инициализирует начальные координаты точки на плоскости.
+     * @param first Координата x
+     * @param second Координата y
      */
     public Point(int first, int second) {
         this.x = first;
         this.y = second;
+    }
+
+    /**
+     * Конструктор - инициализирует начальные координаты точки в трехмерном пространстве.
+     * @param x Координата x
+     * @param y Координата y
+     * @param z координата z
+     */
+    public Point(int x, int y, int z) {
+        this.x = x;
+        this.y = y;
+        this.z = z;
     }
 
     /**
@@ -47,6 +63,16 @@ public class Point {
      */
     public static double distance(int x1, int y1, int x2, int y2) {
         return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+    }
+
+    /**
+     * Метод высичляет расстояние между двумя точками в трехмерном пространстве.
+     * На вход метода подается точка относительно которой нужно рассчитать расстояние от текущей.
+     * @param that Объект - точка
+     * @return Расстояние между точками
+     */
+    public double distance3d(Point that) {
+        return Math.sqrt(Math.pow(this.x - that.x, 2) + Math.pow(this.y - that.y, 2) + Math.pow(this.z - that.z, 2));
     }
 
     /**
