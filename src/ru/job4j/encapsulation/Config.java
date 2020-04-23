@@ -23,7 +23,7 @@ public class Config {
 
     /**
      * Конструктор - инициализирует переменную name
-     * @param name
+     * @param name Name
      */
     public Config(String name) {
         this.name = name;
