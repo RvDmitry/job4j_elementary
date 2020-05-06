@@ -2,7 +2,7 @@ package ru.job4j.ex;
 
 /**
  * Class ElementNotFoundException
- * Класс генерирует пользовательские исключения.
+ * Класс генерирует пользовательское исключение, если элемента нет в списке.
  * @author Dmitry Razumov
  * @version 1
  */
