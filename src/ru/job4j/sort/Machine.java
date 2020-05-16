@@ -25,13 +25,10 @@ public class Machine {
         int[] rsl = new int[100];
         int size = 0;
         int cashback = money - price;
-        while (cashback > 0) {
-            for (int coin : coins) {
-                if (cashback - coin >= 0) {
-                    rsl[size++] = coin;
-                    cashback -= coin;
-                    break;
-                }
+        for (int coin : coins) {
+            while (cashback - coin >= 0) {
+                rsl[size++] = coin;
+                cashback -= coin;
             }
         }
         return Arrays.copyOf(rsl, size);
