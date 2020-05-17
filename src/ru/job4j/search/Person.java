@@ -43,7 +43,7 @@ public class Person {
 
     /**
      * Метод возвращает имя.
-     * @return
+     * @return Имя
      */
     public String getName() {
         return name;
@@ -51,7 +51,7 @@ public class Person {
 
     /**
      * Метод возвращает фамилию.
-     * @return
+     * @return Фамилия
      */
     public String getSurname() {
         return surname;
@@ -59,7 +59,7 @@ public class Person {
 
     /**
      * Метод возвращает номер телефона.
-     * @return
+     * @return Телефон
      */
     public String getPhone() {
         return phone;
@@ -67,7 +67,7 @@ public class Person {
 
     /**
      * Метод возвращает адрес.
-     * @return
+     * @return Адрес
      */
     public String getAddress() {
         return address;
