@@ -22,6 +22,5 @@ public class ListSort {
         System.out.println(list);
         Collections.sort(list, Collections.reverseOrder());
         System.out.println(list);
-
     }
 }
