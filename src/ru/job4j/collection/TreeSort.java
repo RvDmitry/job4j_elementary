@@ -6,7 +6,7 @@ import java.util.TreeSet;
 
 /**
  * Class TreeSort
- * В классе практикуется работа с коллекией TreeSort.
+ * В классе практикуется работа с коллекцией TreeSort.
  * @author Dmitry Razumov
  * @version 1
  */
