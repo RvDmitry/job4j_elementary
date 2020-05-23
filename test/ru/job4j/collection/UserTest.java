@@ -38,7 +38,7 @@ public class UserTest {
     }
 
     @Test
-    public void whenCompateIvanVSIvan() {
+    public void whenCompareIvanVSIvan() {
         Set<User> users = new TreeSet<>();
         users.add(new User("Ivan", 35));
         users.add(new User("Ivan", 31));
