@@ -1,5 +1,7 @@
 package ru.job4j.collection;
 
+import java.util.Objects;
+
 /**
  * Class Job
  * Класс характеризует работу.
@@ -59,5 +61,31 @@ public class Job implements Comparable<Job> {
     @Override
     public int compareTo(Job another) {
         return Integer.compare(priority, another.priority);
+    }
+
+    /**
+     * Метод определяет равна ли одна работа другой.
+     * @param o Объект - работа
+     * @return true, если две работы идентичны, иначе false
+     */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Job job = (Job) o;
+        return priority == job.priority && Objects.equals(name, job.name);
+    }
+
+    /**
+     * Метод вычисляет хеш-код работы.
+     * @return Хеш-код
+     */
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, priority);
     }
 }
