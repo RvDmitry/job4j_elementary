@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 
 /**
  * Class LexSortTest
- * Класс тестирует сортировку наименований разделов лекий по их номерам.
+ * Класс тестирует сортировку наименований разделов лекции по их номерам.
  * @author Dmitry Razumov
  * @version 1
  */
@@ -23,6 +23,22 @@ public class LexSortTest {
                 "1. Task.",
                 "2. Task.",
                 "10. Task."
+        };
+        Arrays.sort(input, new LexSort());
+        assertThat(input, is(out));
+    }
+
+    @Test
+    public void whenSortSectionByNumber() {
+        String[] input = {
+                "10. Тест.",
+                "2. Велосипед.",
+                "1. Як."
+        };
+        String[] out = {
+                "1. Як.",
+                "2. Велосипед.",
+                "10. Тест."
         };
         Arrays.sort(input, new LexSort());
         assertThat(input, is(out));
