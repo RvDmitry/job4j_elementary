@@ -17,16 +17,13 @@ public class StringCompare implements Comparator<String> {
      */
     @Override
     public int compare(String left, String right) {
-        int res = 0;
-        int i = 0;
         int min = Math.min(left.length(), right.length());
-        while (res == 0 && i < min) {
-            res = Character.compare(left.charAt(i), right.charAt(i));
-            i++;
+        for (int i = 0; i < min; i++) {
+            int res = Character.compare(left.charAt(i), right.charAt(i));
+            if (res != 0) {
+                return res;
+            }
         }
-        if (res == 0) {
-            res = left.length() - right.length();
-        }
-        return res;
+        return left.length() - right.length();
     }
 }
