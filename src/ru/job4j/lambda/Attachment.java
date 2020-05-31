@@ -1,5 +1,7 @@
 package ru.job4j.lambda;
 
+import java.util.Objects;
+
 /**
  * Class Attachment
  * @author Dmitry Razumov
@@ -48,5 +50,31 @@ public class Attachment {
     @Override
     public String toString() {
         return "{" + "name='" + name + '\'' + ", size=" + size + '}';
+    }
+
+    /**
+     * Метод сравнивает два объекта Attachment.
+     * @param o Объект Attachment
+     * @return true, если объекты равны, иначе false
+     */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Attachment that = (Attachment) o;
+        return size == that.size && Objects.equals(name, that.name);
+    }
+
+    /**
+     * Метод вычисляет хеш-код объета Attachment.
+     * @return Хеш-код
+     */
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, size);
     }
 }
