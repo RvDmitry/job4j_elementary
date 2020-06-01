@@ -19,9 +19,9 @@ public class DepDescComp implements Comparator<String> {
      */
     @Override
     public int compare(String o1, String o2) {
-        o1 += "/";
-        o2 += "/";
-        int res = o2.substring(0, o2.indexOf("/")).compareTo(o1.substring(0, o1.indexOf("/")));
-        return res == 0 ? o1.substring(o1.indexOf("/")).compareTo(o2.substring(o2.indexOf("/"))) : res;
+        String[] first = o1.split("/");
+        String[] second = o2.split("/");
+        int res = second[0].compareTo(first[0]);
+        return res == 0 ? o1.compareTo(o2) : res;
     }
 }
