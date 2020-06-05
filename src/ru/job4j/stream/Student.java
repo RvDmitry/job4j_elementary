@@ -20,7 +20,7 @@ public class Student {
 
     /**
      * Конструктор создает ученика.
-     * @param score Общий бал
+     * @param score Общий балл
      * @param surname Фамилия
      */
     public Student(int score, String surname) {
@@ -29,8 +29,8 @@ public class Student {
     }
 
     /**
-     * Метод возвращает общий бал.
-     * @return Общий бал
+     * Метод возвращает общий балл.
+     * @return Общий балл
      */
     public int getScore() {
         return score;
