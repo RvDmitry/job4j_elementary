@@ -29,6 +29,7 @@ public class SchoolTest {
                 new Student(30, "Student 3"),
                 new Student(40, "Student 4"),
                 new Student(50, "Student 5"),
+                new Student(55, "Student 5"),
                 new Student(60, "Student 6"),
                 new Student(70, "Student 7"),
                 new Student(80, "Student 8"),
@@ -54,6 +55,7 @@ public class SchoolTest {
     public void whenCollect50and70() {
         List<Student> expected = Arrays.asList(
                 new Student(50, "Student 5"),
+                new Student(55, "Student 5"),
                 new Student(60, "Student 6")
         );
         School school = new School();
