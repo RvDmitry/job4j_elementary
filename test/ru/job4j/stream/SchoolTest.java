@@ -4,7 +4,9 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.function.Predicate;
 
 import static org.hamcrest.core.Is.is;
@@ -70,5 +72,16 @@ public class SchoolTest {
         School school = new School();
         Predicate<Student> predict = student -> student.getScore() > 0 && student.getScore() < 50;
         assertThat(school.collect(students, predict), is(expected));
+    }
+
+    @Test
+    public void whenMapCollect() {
+        School school = new School();
+        Map<String, Student> rsl = school.collect(students);
+        Map<String, Student> expected = new HashMap<>();
+        for (var student : students) {
+            expected.putIfAbsent(student.getSurname(), student);
+        }
+        assertThat(rsl, is(expected));
     }
 }
