@@ -1,5 +1,7 @@
 package ru.job4j.stream;
 
+import java.util.Objects;
+
 /**
  * Class Address
  * Класс характеризует адрес клиента.
@@ -78,5 +80,34 @@ public class Address {
     public String toString() {
         return "Address{" + "city='" + city + '\'' + ", street='" + street
                 + '\'' + ", home=" + home + ", apartment=" + apartment + '}';
+    }
+
+    /**
+     * Метод проверяет равны ли адреса.
+     * @param o Адрес
+     * @return true, если адреса равны, иначе false
+     */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Address address = (Address) o;
+        return home == address.home 
+                && apartment == address.apartment 
+                && Objects.equals(city, address.city) 
+                && Objects.equals(street, address.street);
+    }
+
+    /**
+     * Метод вычисляет хеш-код адреса.
+     * @return Хеш-код
+     */
+    @Override
+    public int hashCode() {
+        return Objects.hash(city, street, home, apartment);
     }
 }

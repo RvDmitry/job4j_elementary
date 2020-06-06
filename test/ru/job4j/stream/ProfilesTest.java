@@ -21,17 +21,20 @@ public class ProfilesTest {
         Profile first = new Profile(ivanov, "Ivanov I.I.");
         Address petrov = new Address("Tomsk", "Street 2", 30, 5);
         Profile second = new Profile(petrov, "Petrov P.P.");
+        Address petrova = new Address("Tomsk", "Street 2", 30, 5);
+        Profile third = new Profile(petrova, "Petrova V.V.");
         Address smirnov = new Address("Moskov", "Street 3", 7, 26);
-        Profile third = new Profile(smirnov, "Smirnov A.A.");
+        Profile fourth = new Profile(smirnov, "Smirnov A.A.");
         List<Profile> profiles = Arrays.asList(
                 first,
                 second,
-                third
+                third,
+                fourth
         );
         List<Address> expected = Arrays.asList(
                 ivanov,
-                petrov,
-                smirnov
+                smirnov,
+                petrov
         );
         assertThat(Profiles.collect(profiles), is(expected));
     }
