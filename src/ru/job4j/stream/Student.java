@@ -29,6 +29,15 @@ public class Student {
     }
 
     /**
+     * Перегруженный конструктор, используется для создания ученика.
+     * @param surname Фамилия
+     * @param score Общий балл
+     */
+    public Student(String surname, int score) {
+        this(score, surname);
+    }
+
+    /**
      * Метод возвращает общий балл.
      * @return Общий балл
      */
@@ -37,11 +46,27 @@ public class Student {
     }
 
     /**
+     * Метод задает общий балл ученика.
+     * @param score Общий балл
+     */
+    public void setScore(int score) {
+        this.score = score;
+    }
+
+    /**
      * Метод возвращает фамилию.
      * @return Фамилия
      */
     public String getSurname() {
         return surname;
+    }
+
+    /**
+     * Метод задает фамилию ученика.
+     * @param surname Фамилия
+     */
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
 
     /**
