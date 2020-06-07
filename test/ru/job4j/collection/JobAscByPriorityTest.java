@@ -25,7 +25,7 @@ public class JobAscByPriorityTest {
                 new Job("A task", 2),
                 new Job("C task", 0)
         );
-        List<Job> expected = Arrays.asList(
+        List<Job> expected = List.of(
                 new Job("C task", 0),
                 new Job("Fix bug C", 1),
                 new Job("A task", 2),

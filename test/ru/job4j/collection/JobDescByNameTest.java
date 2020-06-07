@@ -25,7 +25,7 @@ public class JobDescByNameTest {
                 new Job("Fix bug A", 4),
                 new Job("Fix bug C", 1)
         );
-        List<Job> expected = Arrays.asList(
+        List<Job> expected = List.of(
                 new Job("Fix bug C", 1),
                 new Job("Fix bug A", 4),
                 new Job("C task", 0),
