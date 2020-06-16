@@ -1,7 +1,5 @@
 package ru.job4j.tracker;
 
-import java.time.LocalDate;
-
 /**
  * Class Pacient
  * Класс описывает пациента.
